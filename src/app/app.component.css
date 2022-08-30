@@ -1,0 +1,18 @@
+app-incomes{
+    width: 40%;
+    margin-top: 20px;
+}
+
+app-expenses{
+    width: 40%;
+    margin-top: 20px;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+}
+
+.title{
+    text-align: center;
+}

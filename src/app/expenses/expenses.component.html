@@ -1,1 +1,18 @@
-<p>expenses works!</p>
+<mat-card class="container">
+
+    <h2>Expenses</h2>
+    <p>
+        <mat-label>Expense name </mat-label>
+        <input matInput [(ngModel)]="expenseName" type="text">
+    </p>
+        <mat-label>Income value </mat-label>
+        <input matInput [(ngModel)]="expenseValue" type="number">
+    
+        <button mat-flat-button color="primary" (click)="confirm()">Confirm</button>
+        <mat-divider></mat-divider>
+    
+        <h3>Your expenses</h3>
+    <ul>
+        <li *ngFor="let expense of expenses">{{expense.expenseName}} - {{expense.expenseValue | number:'1.2'}}</li>
+    </ul>
+    </mat-card>

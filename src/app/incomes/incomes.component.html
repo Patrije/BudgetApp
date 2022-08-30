@@ -1,15 +1,18 @@
+<mat-card class="container">
+
 <h2>Incomes</h2>
-
-
-        <mat-label>Income name</mat-label>
-        <input matInput [(ngModel)]="incomeName">
-
-        <mat-label>Income value</mat-label>
-        <input matInput [(ngModel)]="incomeValue">
+<p>
+    <mat-label>Income name </mat-label>
+    <input matInput [(ngModel)]="incomeName" type="text">
+</p>
+    <mat-label>Income value </mat-label>
+    <input matInput [(ngModel)]="incomeValue" type="number">
 
     <button mat-flat-button color="primary" (click)="confirm()">Confirm</button>
+    <mat-divider></mat-divider>
 
-
+    <h3>Your incomes</h3>
 <ul>
-    <li *ngFor="let income of incomes">{{income.incomeName}}, {{income.incomeValue}}</li>
+    <li *ngFor="let income of incomes">{{income.incomeName}} - {{income.incomeValue | number:'1.2'}}</li>
 </ul>
+</mat-card>
