@@ -15,6 +15,7 @@ export class ExpensesComponent implements OnInit {
   expenseName = '';
   expenseValue = 0;
   expenses: Expense[] = [];
+  @Output() deleteExpenseEvent= new  EventEmitter<number>();
 
   @Output() increaseExpensesEvent= new  EventEmitter<number>();
 
@@ -32,6 +33,12 @@ export class ExpensesComponent implements OnInit {
 
   isValid(): boolean{
     return this.expenseName!=='' && this.expenseValue!==0;
+  }
+
+  delete(expenseName:string){
+    const index = this.expenses.findIndex(expense => expense.expenseName === expenseName);
+    this.deleteExpenseEvent.emit(this.expenses[index].expenseValue);
+    this.expenses.splice(index, 1);
   }
 
 }

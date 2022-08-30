@@ -26,4 +26,10 @@ export class AppComponent {
   decreaseIncome(value: number){
     this.balance = this.balance - value;
   }
+
+  decreaseExpense(value: number){
+    this.balance = this.balance + value;
+  }
+
+  
 }
