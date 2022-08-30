@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 interface Expense{
   expenseName: string,
-  expenseValue: string
+  expenseValue: number
 }
 
 @Component({
@@ -13,7 +13,7 @@ interface Expense{
 export class ExpensesComponent implements OnInit {
 
   expenseName = '';
-  expenseValue = '';
+  expenseValue = 0;
   expenses: Expense[] = [];
 
   constructor() { }
@@ -23,6 +23,12 @@ export class ExpensesComponent implements OnInit {
 
   confirm(){
     this.expenses.push({expenseName: this.expenseName, expenseValue: this.expenseValue});
+    this.expenseName = '';
+    this.expenseValue = 0;
+  }
+
+  isValid(): boolean{
+    return this.expenseName!=='' && this.expenseValue!==0;
   }
 
 }

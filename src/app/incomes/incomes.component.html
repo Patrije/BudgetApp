@@ -8,7 +8,7 @@
     <mat-label>Income value </mat-label>
     <input matInput [(ngModel)]="incomeValue" type="number">
 
-    <button mat-flat-button color="primary" (click)="confirm()">Confirm</button>
+    <button mat-flat-button color="primary" (click)="confirm()" [disabled]="!isValid()">Confirm</button>
     <mat-divider></mat-divider>
 
     <h3>Your incomes</h3>
