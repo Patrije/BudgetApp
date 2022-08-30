@@ -6,6 +6,6 @@
 
 </div>
 
-<mat-card class="balance">
+<mat-card class="balance" [ngClass]="balance >= 0 ? 'green':'red'">
   <p>Balance: {{balance| number:'1.2'}}</p>
 </mat-card>

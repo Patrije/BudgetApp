@@ -22,3 +22,11 @@ app-expenses{
     margin: auto;
     background-color: rgb(171, 164, 97);
 }
+
+.green{
+    background-color: rgba(57, 140, 130, 0.546);
+}
+
+.red{
+    background-color: rgba(140, 57, 116, 0.546);
+}
