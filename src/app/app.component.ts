@@ -9,6 +9,7 @@ export class AppComponent {
 
   balance: number = 0;
   title = 'BudgetApp';
+  initialBalance = 0;
 
   increaseExpenses(value: number): void{
       this.balance = this.balance -value;
@@ -16,5 +17,13 @@ export class AppComponent {
 
   increaseIncomes(value:number): void{
     this.balance = this.balance + value;
+  }
+
+  passInitialBalance(){
+    this.balance = this.initialBalance;
+  }
+
+  decreaseIncome(value: number){
+    this.balance = this.balance - value;
   }
 }

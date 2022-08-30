@@ -1,7 +1,11 @@
 <h1 class="title">Budget App</h1>
+<mat-card class="initial-balance">
+  <mat-label>Initial balance</mat-label>
+  <input matInput [(ngModel)]="initialBalance" type="number" (keyup)="passInitialBalance()">
+</mat-card>
 
 <div class="container">
-<app-incomes (increaseIncomesEvent)="increaseIncomes($event)"></app-incomes>
+<app-incomes (increaseIncomesEvent)="increaseIncomes($event)" (deleteIncomeEvent)="decreaseIncome($event)"></app-incomes>
 <app-expenses (increaseExpensesEvent)="increaseExpenses($event)"></app-expenses>
 
 </div>

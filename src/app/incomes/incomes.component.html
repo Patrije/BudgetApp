@@ -13,6 +13,6 @@
 
     <h3>Your incomes</h3>
 <ul>
-    <li *ngFor="let income of incomes">{{income.incomeName}} - {{income.incomeValue | number:'1.2'}}</li>
+    <li *ngFor="let income of incomes">{{income.incomeName}} - {{income.incomeValue | number:'1.2'}}<button (click)="delete(income.incomeName)">delete</button></li>
 </ul>
 </mat-card>

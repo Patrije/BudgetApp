@@ -23,6 +23,14 @@ app-expenses{
     background-color: rgb(171, 164, 97);
 }
 
+.initial-balance{
+    width: 20%;
+    margin-top: 20px; 
+    margin-left: 130px;
+    background-color: rgb(171, 164, 97);
+}
+
+
 .green{
     background-color: rgba(57, 140, 130, 0.546);
 }

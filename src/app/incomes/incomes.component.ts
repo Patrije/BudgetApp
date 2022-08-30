@@ -14,6 +14,7 @@ export class IncomesComponent implements OnInit {
   incomeValue = 0;
   incomes: Income[] = [];
   @Output() increaseIncomesEvent= new  EventEmitter<number>();
+  @Output() deleteIncomeEvent= new  EventEmitter<number>();
 
   constructor() { }
 
@@ -29,6 +30,12 @@ export class IncomesComponent implements OnInit {
 
   isValid(): boolean{
     return this.incomeName!=='' && this.incomeValue!==0;
+  }
+
+  delete(incomeName:string){
+    const index = this.incomes.findIndex(income => income.incomeName === incomeName);
+    this.deleteIncomeEvent.emit(this.incomes[index].incomeValue);
+    this.incomes.splice(index, 1);
   }
 
 }
