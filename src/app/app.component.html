@@ -1,6 +1,11 @@
 <h1 class="title">Budget App</h1>
 
 <div class="container">
-<app-incomes class="incomes"></app-incomes>
-<app-expenses></app-expenses>
+<app-incomes (increaseIncomesEvent)="increaseIncomes($event)"></app-incomes>
+<app-expenses (increaseExpensesEvent)="increaseExpenses($event)"></app-expenses>
+
 </div>
+
+<mat-card class="balance">
+  <p>Balance: {{balance}}</p>
+</mat-card>

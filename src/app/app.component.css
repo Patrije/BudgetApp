@@ -16,3 +16,9 @@ app-expenses{
 .title{
     text-align: center;
 }
+
+.balance{
+    width: 20%;
+    margin: auto;
+    background-color: rgb(171, 164, 97);
+}
