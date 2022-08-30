@@ -1,0 +1,15 @@
+<h2>Incomes</h2>
+
+
+        <mat-label>Income name</mat-label>
+        <input matInput [(ngModel)]="incomeName">
+
+        <mat-label>Income value</mat-label>
+        <input matInput [(ngModel)]="incomeValue">
+
+    <button mat-flat-button color="primary" (click)="confirm()">Confirm</button>
+
+
+<ul>
+    <li *ngFor="let income of incomes">{{income.incomeName}}, {{income.incomeValue}}</li>
+</ul>
