@@ -25,7 +25,6 @@ export class IncomesComponent implements OnInit {
     this.increaseIncomesEvent.emit(this.incomeValue);
     this.incomeName = '';
     this.incomeValue = 0;
-    let incomeSum = this.incomes.map(exp => exp.incomeValue).reduce((acc, cur) => acc + cur);
   }
 
   isValid(): boolean{

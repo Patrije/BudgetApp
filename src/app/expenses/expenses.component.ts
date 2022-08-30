@@ -28,7 +28,6 @@ export class ExpensesComponent implements OnInit {
     this.increaseExpensesEvent.emit(this.expenseValue);
     this.expenseName = '';
     this.expenseValue = 0;
-    // let expenseSum = this.expenses.map(exp => exp.expenseValue).reduce((acc, cur) => acc + cur);
   }
 
   isValid(): boolean{
